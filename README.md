@@ -13,7 +13,7 @@ Download and install Anaconda from [here](https://www.anaconda.com/products/indi
 1. **Clone the Repository**:
    Clone this repository to your local machine using:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Quorumetrix/czi-preprocessing
 
 
 
@@ -22,15 +22,15 @@ Navigate to the cloned repository directory and create a Conda environment using
 
     conda create --name czi-preprocessing python=3.9
     conda activate czi-preprocessing
-    pip install --no-cache-dir -r requirements.txt
+    pip install -r requirements.txt
 
 
 # Usage
 
 #### Run the Script:
-With the Conda environment activated, run the preprocessing script:
+With the Conda environment activated, navigate to the directory containing the czi_preprocessing.py file and run the preprocessing script:
 
-    python preprocessing.py
+    python czi_preprocessing.py 
 
 #### Select the CZI File:
 A file dialog will appear. Select the .czi file you wish to process.
