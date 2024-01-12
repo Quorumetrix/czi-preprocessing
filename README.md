@@ -11,19 +11,23 @@ Download and install Anaconda from [here](https://www.anaconda.com/products/indi
 ## Installation
 
 **Clone the Repository**:
-   Clone this repository to your local machine using:
-   ```bash
-   git clone https://github.com/Quorumetrix/czi-preprocessing
+
+Clone this repository to your local machine using:
+
+
+    git clone https://github.com/Quorumetrix/czi-preprocessing
 
 
 
 **Download it as a ZIP file**:
+
 ![How to download the software](images/github_screenshot.png)
 
 
 ## Create and Activate Conda Environment:
 Navigate to the cloned repository directory and create a Conda environment using the provided requirements.txt file:
 
+    cd path/to/my/folder
     conda create --name czi-preprocessing python=3.9
     conda activate czi-preprocessing
     pip install -r requirements.txt
@@ -48,4 +52,3 @@ The script will process the selected .czi file, saving the image data and metada
 
 ### Output
 The script will output TIFF files in the specified directory. Each file corresponds to a different stage position in the original .czi file. Additional metadata, including the XY position from the motorized stage, is embedded in each TIFF file.
-
