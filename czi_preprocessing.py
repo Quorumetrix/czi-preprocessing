@@ -50,6 +50,12 @@ for scene in root.findall('.//Scene'):
 # Assuming the first scene is always the center ("Mid")
 dunn_center = stage_positions.get("Mid", "Not available")
 
+# Find the tile dimensions, will be in microns
+tile_dimension = root.find('.//TileDimension')
+if tile_dimension is not None:
+    tile_width = tile_dimension.find('Width').text if tile_dimension.find('Width') is not None else 'Not available'
+    tile_height = tile_dimension.find('Height').text if tile_dimension.find('Height') is not None else 'Not available'
+
 # Load the image
 img = AICSImage(file_to_load)
 
@@ -65,7 +71,9 @@ for index, scene_name in enumerate(tqdm(img.scenes)):
         'ImageJ': 'X.xx',
         'Info': f'Scene {scene_name} from {czi_file}',
         'DunnCenter': dunn_center,
-        'StagePosition': stage_positions.get(scene_name, "Not available")
+        'StagePosition': stage_positions.get(scene_name, "Not available"),
+        'TileWidth': tile_width,
+        'TileHeight': tile_height
     }
 
     # Save the data as a TIFF file with metadata

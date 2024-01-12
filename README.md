@@ -10,11 +10,15 @@ Download and install Anaconda from [here](https://www.anaconda.com/products/indi
 
 ## Installation
 
-1. **Clone the Repository**:
+**Clone the Repository**:
    Clone this repository to your local machine using:
    ```bash
    git clone https://github.com/Quorumetrix/czi-preprocessing
 
+
+
+**Download it as a ZIP file**:
+![How to download the software](images/github_screenshot.png)
 
 
 ## Create and Activate Conda Environment:
@@ -39,7 +43,7 @@ A file dialog will appear. Select the .czi file you wish to process.
 Next, a folder dialog will prompt you to select the output directory where the processed TIFF files will be saved.
 
 #### Processing:
-The script will process the selected .czi file, saving the image data and metadata to the chosen directory. Progress will be displayed in the command line interface.
+The script will process the selected .czi file, saving the image data and metadata to the chosen directory. Progress will be displayed in the console. This may take a few minutes to process, depending on the computer.
 
 
 ### Output
