@@ -64,7 +64,9 @@ for index, scene_name in enumerate(tqdm(img.scenes)):
     img.set_scene(scene_name)
     all_timepoints = img.get_image_data("TYX", S=0, C=0)
 
-    tiff_filename = f"{output_dir}/xy point {index}.tiff"
+    # tiff_filename = f"{output_dir}/xy point {index}.tiff"
+    # Prepare the filename with zero-padded index
+    tiff_filename = f"{output_dir}/xy point {index:02d}.tiff"
 
     # Prepare metadata
     metadata = {
